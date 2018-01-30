@@ -1,0 +1,54 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>The Dubai Mall Tour</title>
+		<meta name="description" content="Take a tour of Dubai Mall.">
+		<meta name="author" content="Dubai Mall">
+
+		<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #street-view {
+        height: 100%;
+      }
+    </style>
+	</head>
+
+	<body>
+
+			<div id="street-view"></div>
+    <script>
+var panorama;
+function initialize() {
+  panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('street-view'),
+      {
+        position: {lat: 25.1990, lng: 55.2788},
+        addressControlOptions: {
+          position: google.maps.ControlPosition.BOTTOM_CENTER
+        },
+        pov: {heading: 100, pitch: 0},
+        zoom: 1,
+        linksControl: true,
+        panControl: false,
+        enableCloseButton: true,
+        disableDefaultUI: false,
+        zoomControl: false,
+        
+        
+      });
+}
+
+    </script>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6rtjNcVNP7Y5xvIklN2SoU7x-ikUxPtg&signed_in=true&callback=initialize">
+    </script>
+	</body>
+</html>
